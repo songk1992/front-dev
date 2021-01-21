@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    
+<title>N사 사이트 레이아웃 만들기</title>
+<style type="text/css">
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    
+* { margin:0; padding:0; }
+    
+body {
+    
+    background: #f2f2f2;
+    font-family: 'Nanum Gothic', sans-serif;
+    
+        
+    }
+    
+.top-line {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    align-content: center;
+    background-color: aquamarine;
+}
+    
+.top-line-w1 {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    background-color: azure;
+}
+    
+.header {
+	width: auto;
+    min-width: 512;
+	height: 100px;
+	margin:120px 0 0 30%;
+	backgro3und-color:#f00
+
+
+}
+
+.header .logo-section, .header .search-box {
+	float:left
+} 
+
+/* logo */
+.logo-section{
+	width:350px;
+	height:100px;
+	background:url('images/mylogo.png') no-repeat;
+}
+/* search-box */
+
+.header .search-box {
+	background-color: #fdfdfd;
+    margin-top: 25px;
+	width: 470px;
+	height: 49px;
+	display: inline-block;
+	border: 2px solid green;
+}
+
+.search-box-input-text {
+    margin: 12px 0 0 9px;
+    width: 360px;
+    height: 23px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+    
+.keyboard-button {
+    margin-top: 0px;
+    padding: 15px 0 6px 0; 
+    }
+.dropdown-button {
+    margin-top: 0px;
+    padding: 15px 0 6px 10px; 
+    }
+    
+.search-box search-box-input-text,
+.search-box keyboard-button,
+.search-box dropdown-button,
+.search-box button search-button
+    { 
+	display: block; float:right;
+} 
+
+.search-button {
+  background-color: #19CE60;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  padding: 16px 12px; 
+  font-size: 16px;
+    padding-top: 12px;
+    padding-right: -100px;
+    
+  cursor: pointer;
+
+}
+    
+.ion-icon {
+  color: blue;
+}
+
+.clear {
+    clear: both;  
+    }
+
+</style>
+</head>
+
+
+<body>
+    
+
+    
+<!-- section1 : 맨위에 다크모드 줄 -->
+<div class="top-line">
+    <div class="top-line-w1">N사 브라우저</div>
+    <div class="top-line-w1">N사 브라우저</div>
+    <div class="top-line-w1">N사 브라우저</div>
+    <div class="top-line-w1">N사 브라우저</div>
+</div>
+
+<div class="header">
+    <!-- logo -->
+    <div class="logo-section"> </div>
+    
+    <div class="search-box">
+        
+        <!-- 입력창 -->
+        <input type="text" id="kwd_search" class="search-box-input-text" maxlength="255" />
+        <!-- 키보드 -->
+        <a href="#" id="keyboard_button" class="keyboard-button"><ion-icon name="apps-outline"></ion-icon></a>
+        <!-- 기능 더보기 -->
+        <a href="#" id="dropdown_button" class="dropdown-button"><ion-icon name="chevron-down-outline"></ion-icon></a>
+        <!-- 검색버튼 -->
+          <button type="submit" class="search-button">
+            <i class="fa fa-search"></i>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+         </button>
+		</div>
+	</div>
+
+    <div class="clear"> </div>
+
+
+<!-- 아이코니콘 임포트 -->
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+</body>
+</html>
