@@ -3,57 +3,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>마진과 패딩</title>
-<link href="css/ex02.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+* { margin:0; padding:0; }
 
+body {
+	font-family: "돋움", "맑은 고딕";
+	font-size: 0.8em;
+	color: #333;	
+	margin:0;
+	padding:0; 
+}
+.box1 {
+	margin:10px;
+	padding:10px;
+	border:1px solid #666;
+	width:300px;
+	height: 50px;
+	background-color: #FFC;
+	margin: 0 auto;
+	cursor: pointer;
+}
+</style>
 <script>
-function f(){
-	console.log("f-click");
-}
-
-function g(){
-	console.log("g-click");
-}
-
-let marginChanger = function(){
-	console.log("익명 함수 실행중");
-	document.getElementById("box1").style.marginTop = "50px";
-}
-
-
-let i = 500;
-
-let onDivClicked = function(el){
-	
-	el.getElementById("box1").style.margin = 50;
-	
-	console.log(marginTop);
-	let intervalId = setInterval(
-	function() {
-		console.log("익명 함수 실행중");
-		if(marginTop < -50) {
+var onDivClicked = function(el){
+	var marginTop = parseInt(el.style.marginTop);
+	var intervalId = setInterval(function() {
+		if(marginTop < -72) {
 			clearInterval(intervalId);
-			return;
+			return;			
 		}
 		marginTop -= 10;
-		el.style.marginTop = (marginTop - 10) + "px";
-		console.log("!!!");
-	}, i);
-	
-	
-	
-// console.log(el);
+		el.style.marginTop = marginTop + "px";
+	}, 10);
 }
-
 </script>
 </head>
 
 <body>
 
-<div class="box1" onclick='f(); g(); marginChanger(); '>
-CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.dfsd
-</div>
-<div class="box2">
-CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
+<div class="box1" style="margin-top:200px" onclick='onDivClicked(this)'>
+	CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 </div>
 
 </body>
