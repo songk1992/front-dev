@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+body{
+
+	padding: 0;
+	margin : 10px auto 10px auto;
+	width : 50px;
+	font-size : 12px;
+	font-family: '맑은 고딕', '돋음', Arial, Helvertica, san-serif;
+	color: #222;
+	
+}

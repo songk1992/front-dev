@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "main.css";
+
+body {
+	font-family: "돋움", "맑은 고딕";
+	font-size: 0.8em;
+	color: #333;	
+	margin:100;
+	padding:0; 
+}
+
+.box1 {
+	margin:10px;
+	padding:10px;
+	border:1px solid #666;
+	background-color: #FFC;
+	
+	max-width : 980px;
+	min-width : 800px;
+	
+	max-height : 980px;
+	/*min-height : 800px;*/
+}
+.box2 {
+	border:1px solid #666;
+	width:300px;
+	background-color: #FCC;
+}

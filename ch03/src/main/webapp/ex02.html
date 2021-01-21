@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>마진과 패딩</title>
+<link href="css/ex02.css" rel="stylesheet" type="text/css" />
+
+<script>
+function f(){
+	console.log("f-click");
+}
+
+function g(){
+	console.log("g-click");
+}
+
+let marginChanger = function(){
+	console.log("익명 함수 실행중");
+	document.getElementById("box1").style.marginTop = "50px";
+}
+
+
+let i = 500;
+
+let onDivClicked = function(el){
+	
+	el.getElementById("box1").style.margin = 50;
+	
+	console.log(marginTop);
+	let intervalId = setInterval(
+	function() {
+		console.log("익명 함수 실행중");
+		if(marginTop < -50) {
+			clearInterval(intervalId);
+			return;
+		}
+		marginTop -= 10;
+		el.style.marginTop = (marginTop - 10) + "px";
+		console.log("!!!");
+	}, i);
+	
+	
+	
+// console.log(el);
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="box1" onclick='f(); g(); marginChanger(); '>
+CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.dfsd
+</div>
+<div class="box2">
+CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
+</div>
+
+</body>
+</html>

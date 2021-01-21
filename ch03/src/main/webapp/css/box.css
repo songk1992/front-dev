@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import "main.css";
+
+body:hover {
+	background-color: #ff00ff;
+}
