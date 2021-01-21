@@ -3,65 +3,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>마진과 패딩</title>
-<link href="css/box.css" rel="stylesheet" type="text/css" />
-
 <style type="text/css">
-* { 
-margin:0; 
-padding:0; 
-box-sizing: border-box; 
+* { margin:0; padding: 0 }
+
+body {
+	font-family: "돋움", "맑은 고딕";
+	font-size: 0.8em;
+	color: #333;	
 }
 
-.row{
-    max-width: 1140px;
-
-    margin: 0 auto; /* 마진 북 동 남 서  margin: 0 auto 0 auto; */
-    
-}
-
-section{
-    padding : 80px 0;
-}
-
-.box{
-    padding : 1%;
-}
-
-
-
-.container {
-    min-height: 10em;
-    display: table-cell;
-    vertical-align: middle }
-    
-    
-    
 .box1 {
-	border:1px solid #666;
-	width:50%;
+	border: 1px solid #666;
 	background-color: #FFC;
-	margin: 10%; 
-	padding: 10%;
-
-	/*	
+	/*
 	padding-top: 10px;
 	padding-right: 20px;
+	padding-bottom: 30px;
 	padding-left: 40px;
-	paddig: 10px 20px 30px 40px;
+	padding:10px 20px 30px 40px;
+	*/ 
+	/*
+	padding-top:30px;
+	padding-right:20px;
+	padding-bottom:50px;
+	padding-left:20px;
+	padding:30px 20px 50px 20px;
+	padding:30px 20px 50px;
 	*/
-
+	/*
+	padding-top:30px;
+	padding-right:20px;
+	padding-bottom:30px;
+	padding-left:20px;
+	padding:30px 20px 30px 20px;
+	padding:30px 20px 30px;
+	padding:30px 20px;
+	*/
+	/*
+	padding-top:30px;
+	padding-right:30px;
+	padding-bottom:30px;
+	padding-left:30px;
+	padding:30px 30px 30px 30px;
+	padding:30px 30px 30px;
+	padding:30px 30px;
+	*/
+	padding: 30px;
+	margin: 10px auto 10px auto;
+	width: 500px;
+	height: 50px; 
 }
-
 </style>
 </head>
 
 <body>
-<div class="row">
-	<div class="box1">
-	CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
-	</div>
+<div class="box1">
+CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 </div>
-
 
 
 </body>
