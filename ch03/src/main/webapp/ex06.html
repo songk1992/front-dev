@@ -5,64 +5,33 @@
 <title>naver search box 만들기</title>
 <style type="text/css">
 * { margin:0; padding:0 }
-.header {
-	width: 600px;
-	height: 100px;
-	margin:50px auto 0 auto;
-	backgro3und-color:#f00
-}
+.header { width: 652px; height: 100px; margin:50px auto 0 auto;}
+.header .logo, .header .search-box { float:left } 
 
-.header .logo, .header .search-box {
-	float:left
-} 
+.header .logo { width:225px; height:54px; font-size: 0; text-indent: 110%; background:url('images/mylogo.png') no-repeat 0 -158px; background-size: 440px 410px; }
+.header .search-box { border: 3px solid #19CE60; width: 400px; height: 44px; margin:7px 0 0 20px; }
 
-.header logo{
-	width:225px;
-	height:54px;
-	font-size: 0;
-	text-indent: 110%;
-	background:url('images/mylogo.png') no-repeat 0 -158px;
-	background-size: contain cover;
-}
+.search-box a, .search-box button, .search-box input { display: block; float:left; border: none; } 
+.search-box input:focus, .search-box button:focus { outline: none }
+.search-box a, .search-box button	{ font-size: 0; text-indent: 110%; } 
 
-.logo {
-  background: url('images/mylogo.png');
-  background-repeat: no-repeat;
-  background-size: 300px 100px;
-}
+.search-box input { width:285px; padding: 13px 0 13px 10px; font-size: 16px; font-weight: bold }
+.search-box #keyboard { width:20px; height:14px; margin:15px 10px 0 10px; background:url('images/naver.png') no-repeat -420px -248px; background-size: 440px 410px; }
+.search-box #dropdown { width:10px; height:6px; margin:18px 10px 0 0; background:url('images/naver.png') no-repeat -404px -258px; background-size: 440px 410px; }
 
-
-
-.header .search-box {
-	background-color: #999;
-}
-
-.search-box a, 
-.search-box button,
-.search-box input { 
-	display: block; float:left
-} 
-
-.search-box button {
-	width:45px;
-	height: 45px;
-	font-size: 0;
-	text-indent: 110%;
-	background-color: #19CE60;
-	outline: none;
-	border: none;
-}
+.search-box button { width:45px; height: 44px; background-color:#19CE60; cursor: pointer }
+.search-box button span { width:23px; height: 23px; margin: 0 auto; display:block; background:#19CE60 url('images/naver.png') no-repeat -180px -386px; background-size: 440px 410px; }
 </style>
 </head>
 
 <body>
 	<div class="header">
-		<h1 class="logo">로고</h1>
+		<h1 class="logo">네이버</h1>
 		<div class="search-box">
 			<input type="text">
-			<a href="#">키보드</a>
-			<a href="#">드롭다운</a>
-			<button>돋보기</button>
+			<a id="keyboard" href="#">키보드</a>
+			<a id="dropdown" href="#">드롭다운</a>
+			<button><span>돋보기</span></button>
 		</div>
 	</div>
 	
