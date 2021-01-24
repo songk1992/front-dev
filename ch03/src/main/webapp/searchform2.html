@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+	background: #eee;
+	font: 0.75em nanumgothic, Arial;
+	color: #333;
+	text-align: center;
+}
+
+a {
+	color: #2A679F;
+}
+/*========*/
+.form-wrapper {
+	background-color: #f6f6f6;
+	border-color: #dedede #bababa #aaa #bababa;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	margin: 100px auto;
+	overflow: hidden;
+	padding: 8px;
+	width: 450px;
+}
+
+.form-wrapper #search {
+	border: 1px solid #CCC;
+	box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+	border-radius: 3px;
+	color: #999;
+	float: left;
+	font-weight: 500;
+	font: 1em nanumgothic, Arial;
+	height: 20px;
+	padding: 10px;
+	width: 320px;
+}
+
+.form-wrapper #search:focus {
+	border-color: #aaa;
+	outline: 0;
+}
+
+.form-wrapper #submit {
+	background-color: #EFC569;
+	border: 1px solid #fafafa;
+	border-radius: 3px;
+	color: #fafafa;
+	cursor: pointer;
+	height: 42px;
+	float: right;
+    font: 1em nanumgothic, Arial;
+	padding: 0;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+	width: 100px;
+}
+
+.form-wrapper #submit:hover, .form-wrapper #submit:focus {
+	background-color: #31b2c3;
+}
+
+.form-wrapper #submit:active {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	outline: 0;
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+</body>
+
+<form class="form-wrapper">
+	<input type="text" id="search" placeholder="블로그 검색 또는 URL 입력" required>
+	<input type="submit" value="🔍" id="submit">
+</form>
+
+</html>
