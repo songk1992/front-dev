@@ -58,10 +58,10 @@ ul, ol {
 // DOM Level 1 Event 처리 : element의 event attribute를 사용하는 방식
 
 // 1)HTML Tag에 이벤트 핸들러를 적용하는 방식
-let liSelected = null;
-let onTabClicked = function(li){
+var liSelected = null;
+var onTabClicked = function(li){
 	if(liSelected != null){
-		li.className = "";
+		liSelected.className = "";
 	}
 	
 	li.className = "selected";

@@ -55,26 +55,34 @@ ul, ol {
 </style>
 
 <script type="text/javascript">
-// DOM Level 1 Event 처리 : element의 event attribute를 사용하는 방식
-// 2) Javascript Code (DOM API)로만 작성하는방식
-
-let li = this;
-
-if(listSelected != null){
-	liSelected.className = "";
+// DOM Level 1 Event 처리 : element의 event attribute을 사용하는 방식
+// 2) JavaScript Code(DOM API) 로만 작성하는 방식 
+function f()
+var liSelected = null;
+var onTabClicked = function(){
+	
+	var li = this;
+	
+	// unselect
+	if(liSelected != null){
+		liSelected.className = "";
+	}
+	// select
+	li.className = "selected";
+	liSelected = li;
 }
 
-
-document.getElementById("tab1").onclick = onTabClicked;
-document.getElementById("tab2").onclick = onTabClicked;
-document.getElementById("tab3").onclick = onTabClicked;
-document.getElementById("tab4").onclick = onTabClicked;
-document.getElementById("tab5").onclick = onTabClicked;
-
+window.onload = function(){
+	document.getElementById("tab1").onclick = onTabClicked;
+	document.getElementById("tab2").onclick = onTabClicked;
+	document.getElementById("tab3").onclick = onTabClicked;
+	document.getElementById("tab4").onclick = onTabClicked;
+	document.getElementById("tab5").onclick = onTabClicked;
+}
 </script>
 
 
-<script src="" type="text/javascript"></script>
+
 </head>
 <body>
 	<div class="tab-box">
