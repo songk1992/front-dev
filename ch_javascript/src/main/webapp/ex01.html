@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/ex01.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<script type="text/javascript">
+$(function() {
+	
+	
+	$("p").hide()  // <p> element 들을 전부 숨긴다
+	$(".demo").hide()  // demo class 들을 전부 숨긴다
+	$("#demo").hide()  // id="demo" 들을 전부 숨긴다
+	
+	
+    $("#start").html("Go!");
+});
+
+</script>
+
+
+ <div id="start">Start</div>
+ <div id="demo">숨겨질까?</div>
+ 
+ 
+ 
+</body>
+</html>
