@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+windowPropertyInfo = "";
+for(property in window){
+	windowPropertyInfo += (property + " : " + window[property] + "\n");
+}
+
+console.log(window.windowPropertyInfo);
+
+// 팝업창
+setTimeout(function(){
+	let popup = window.open('popup.html', 'popup', 'width=600, height=400');
+	setTimeout(function(){
+		// popup 창의 문서 내용 바꾸기
+		// 보안문제 (Cross Origin, Cross Domain) 때문에 같은 도메인에서만 가능
+		popup.document.write('<h1>popup text changed! </h1>');
+		popup.hello();
+	}, 2000);
+	
+	setTimeout(function(){
+		popup.moveTo(200, 200);
+	}, 4000);
+	
+	setTimeout(function(){
+		popup.hello();
+	}, 6000);
+	
+}, 2000)
+
+
+</script>
+</head>
+<body>
+
+<h1>BOM(Browser Object) - window, location, screen, navigator</h1>
+<h2>1. window 전역 객체</h2>
+
+</body>
+</html> 
