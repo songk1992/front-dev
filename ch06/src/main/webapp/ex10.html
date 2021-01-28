@@ -1,38 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang='ko'>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
 
+window.addEventListener('load', function(){
+	var imgEl = document.createElement('img');
+	imgEl.setAttribute('src', 'https://cdn.pixabay.com/photo/2012/05/02/20/28/beaver-46242_1280.png');
+	imgEl.setAttribute('width', '200');
+	imgEl.setAttribute('alt', '비버');
+	imgEl.setAttribute('title', '비버');
+	imgEl.setAttribute('data-name', '비버');
+	
+	setTimeout(function(){
+		document.body.appendChild(imgEl);
+	}, 2000)
+});
 
-<script type="text/javascript">
-
-
-var displayDate = function(){
-	document.getElementById( "demo" ).innerHTML = Date();
-}
-
-var cleanUp = function(){
-	document.getElementById( "demo" ).innerHTML = "";	
-}
-
-var onLoad = function() {
-	document.getElementById( "myButton" ).onclick = function() {
-		displayDate();
-	}	
-}
 </script>
-
 </head>
-<body onload="onLoad()">
-<p>click button!!</p>
-<button id="myButton"
-	onmouseover= "displayDate()"
-	onmouseout= "cleanUp()"
->
-try it
-</button>
-<p id="demo"></p>
+<body>
+	<h1> HTML Element 속성 조작하기</h1>
+	<img src='' />
+	<a src=''></a>
 </body>
 </html>

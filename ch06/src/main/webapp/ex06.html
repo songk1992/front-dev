@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+window.addEventListener('load',function(){
+	let h1El = document.createElement('h1');
+	// console.log(typeof(h1El) + ":" + (h1El instanceof HTMLElement));
+	
+	let textNode = document.createTextNode('Hello DOM')
+	h1El.append(textNode);
+	
+	setTimeout(function(){
+		document.body.appendChild(h1El);
+	}, 2000);
+
+	
+});
+
+window.onload = function(){
+	console.log("1");
+}
+
+</script>
+</head>
+<body>
+	<h1> HTML Element(DOM Node) 만들기 01</h1>
+	<div>
+		<p>dwq</p>
+	</div>
+
+</body>
+</html>

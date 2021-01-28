@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// 속성확인
+var s = '';
+for(property in location){
+	s += (property + ":" + location[property] + "\n");
+}
+console.log(s);
+
+</script>
+</head>
+<body>
+	<h1>BOM(Browser Object) - window, location, screen, navigator</h1>
+	<h2>3. location 객체(주소창)</h2>
+
+	<h3>Page Redirection </h3>
+	<button onclick='location.href="http://www.naviworks.com/";'>네비</button>
+	
+	<h3>Page Refresh</h3>
+	<!-- 방법1 -->
+	<button onclick='location = location;'>refresh01</button>
+	<!-- 방법2 -->
+	<button onclick='location.href = location.href;'>refresh02</button>
+	<!-- 방법3 -->
+	<button onclick='location.assign("");'>refresh03</button>
+	<!-- 방법4 -->
+	<button onclick='location.replace(location);'>refresh04</button>
+	<!-- 방법5 -->
+	<button onclick='location.reload();'>refresh05</button>
+	
+	
+</body>
+</html>

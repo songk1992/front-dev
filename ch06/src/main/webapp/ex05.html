@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="browser-detect.js"></script>
+
+<script type="text/javascript">
+/*
+ 	Terminology(용어정리)
+ 	1. 태그(Tag)
+ 		-HTML 문서 안에서 텍스트, 콘텐츠를 정의할 때 사용하는 마크업
+ 	2. Document Object(문서객체)
+ 		DOM: Document Object Model, Tree
+ 		DOM Tree 구성 노드의 타입은 HTMLElement 이다.
+ 		Javascript에서 document라는 이름으로 접근하여 동적으로 화면을 조작할 수 있다.
+ 	3. node(노드)
+ 		DOM Tree의 가각의 요소
+ 
+ */
+
+ // DOM Loading이 완료된 시점
+ window.addEventListener('load', function(){ 
+	 let el = document.getElementById('header-1');
+	 console.log(el);
+ });
+ 
+ 
+</script>
+</head>
+<body>
+	<h1>step1</h1>
+	<script>alert("step2")</script>
+	<h1>step3</h1>
+	<script>alert("step4")</script>
+</body>
+</html>
