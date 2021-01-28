@@ -35,5 +35,6 @@
 		<module>ch05</module>
 		<module>ch_jquery</module>
 		<module>ch_javascript</module>
+		<module>ch07</module>
 	</modules>
 </project>

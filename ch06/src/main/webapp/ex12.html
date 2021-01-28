@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 이벤트 기본 동작 막기
+// form : validation
+// a : 버튼이나 메뉴로 사용하는 경우 (click 이벤트) + Ajax 통신 (자바스크립트 코드가 실행) 인 경우
+window.addEventListener('load', function(){
+	let btn = document.getElementById('header');
+	btn.addEventListener('click', function(event){
+		event.preventDefault();
+		console.log('fetching data......');
+	});
+	
+});
+
+
+</script>
+</head>
+<body>
+	<h1> Event 기본동작 막기: &lt;a&gt</h1>
+	<a href='https://www.naver.com' id='header'>Click!</a>
+</body>
+</html>

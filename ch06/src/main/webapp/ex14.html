@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// Event Propagation
+	// 이벤트가 상위 엘리멘트로 전파
+	// <= IE8 : outer-div > inner-div > header > text
+	// standard : outer-div < inner-div < header < text
+
+	window.addEventListener('load', function() {
+
+		document.getElementById('outer-div').addEventListener('click',
+				function() {
+					console.log('outer-div');
+				});
+
+		document.getElementById('inner-div').addEventListener('click',
+				function(e) {
+					let event = e || window.event;
+
+					// prevent propagation(bubbling)
+					event.cancelBubbling = true;
+					event.stopPropagation && event.stopPropagation()
+
+					console.log('inner-div');
+				});
+
+		document.getElementById('header').addEventListener('click', function() {
+			console.log('header');
+		});
+
+		document.getElementById('text').addEventListener('click', function() {
+			console.log('text');
+		});
+	});
+</script>
+
+
+
+</head>
+
+
+<body>
+	<div id='outer-div'>
+		<div id='inner-div'>
+			<h1 id='header'>
+				<span id='text'>text</span>
+			</h1>
+		</div>
+	</div>
+
+</body>
+
+</html>

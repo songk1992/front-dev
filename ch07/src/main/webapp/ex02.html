@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- CDN 호쇼팅 -->
+<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+<script>
+
+// DOM Loading 작업이 끝난 후에 
+// jQuery는 DOM Element를 선택하는 작업을 보통 해야한다.
+
+// 1. DOM 로딩 완료 시점 01 : DOM API를 사용
+window.addEventListener('load', function(){
+	var $obj = $('#header');
+	console.log($obj.length);
+})
+
+// 2. DOM 로딩 완료 시점 02 : jQuery 함수로 document 객체를 선택하고 ready 함수를 사용 
+$(document).ready(function(){
+	var $obj = $('#header');
+	console.log($obj.length);
+});
+
+// 추천 : 
+// 3. DOM 로딩 완료 시점 03 : document와 ready 함수를 생략하고 시작 함수만 $() 안에 넣는다.
+$(function(){
+	var $obj = $('#header');
+	console.log($obj.length);
+});
+
+
+
+jQuery( document ).ready( function() {
+    alert( "Hello jQuery - 1" );
+});
+
+$( document ).ready( function() {
+    alert( "Hello jQuery - 2" );
+});
+
+$(function(){
+    alert( "Hello jQuery - 3" );
+});
+
+</script>
+</head>
+<body>
+
+
+<h1>jQuery를 HTMLElement를 골라야 할 시점</h1>
+
+
+<p>
+    이 문장이 보이고 Hello World가 뜨면, 자바스크립트에서 HTML 엘리멘트에 접근할 수
+    있는 것입니다. 
+</p>
+</body>
+</html>

@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script>
-// <= IE8대응 (cross- browser) 이벤트 등록
+<script type="text/javascript">
+// <=IE8대응(cross-browser) 이벤트 등록
 let registerEventHandler = function(element, eventName, handler){
+	element &&              					// element가 null이 아니면
+	element.attachEvent &&  					// <=IE8
+	element.attachEvent(eventName, handler);
 	
+	element &&              					// element가 null이 아니면
+	element.addEventListener && 					// standard others
+	element.addEventListener(eventName, handler);	
 }
 
 window.addEventListener('load', function(){
-	let header = document.getElementbyId('header');
+	let header = document.getElementById('header');
+	
 	let clickEventListener = function(){
 		console.log('click1');
 	}
 	
-	header.addEventListener('click', clickEventListner);
+	header.addEventListener('click', clickEventListener);
 	header.addEventListener('click', function(){
 		console.log('click2');
 	});
 	
 	// Listener 제거
-	header.removeEventListener('click', clickEventListener);
-	
-	// <= IE8 지원해야 할 경우(<= IE8 대응)
+	// header.removeEventListener('click', clickEventListener);
+
+	// <=IE8 지원해야 할 경우(<=IE8대응)
+	registerEventHandler(header, 'click', function(){
+		console.log('click3');
+	});
 });
 </script>
 </head>
