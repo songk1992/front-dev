@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>image viewer</title>
+<link href='css/imagerviewer.css' rel='stylesheet' type="text/css" />
+<!-- CDN 호쇼팅 -->
+<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/imageviewer.js"></script>
+<script type="text/javascript">
+ImageViewer.init();
+</script>
+</head>
+<body>
+	<div class='image-viewer'>
+		<div class='buttons'>
+			<button id='btn-change'>화면을 변경</button>
+			<button id='btn-slide'>슬라이드 시작</button>
+		</div>
+		<div class='view'>
+			<img />
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+1. 슬라이드 시작 버튼 click -> 슬라이드 중지 (버튼 변신)
+2. 슬라이드 쇼 시작은 intervalId = setInterval(function(){...}, 1000);
+3. 중지할때는 clearInterval(intervalId)
+4. 슬라이드 (중지) 버튼 click -> 슬라이드 (시작)
+ 
+
+
+ -->
