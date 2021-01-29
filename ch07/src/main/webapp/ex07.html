@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<!-- CDN 호쇼팅 -->
+<script type="text/javascript" src="jquery/jquery-3.5.1.min.js"></script>
+
+<script>	
+	$(function(){
+		setTimeout(function(){
+			$(".red strong").css("color","red");
+			$(".blue strong#s1").css("color","#00f");
+			$(".blue #s2").css({color: '#00f', textDecoration: 'underline'});
+		}, 2000)
+		
+		
+		
+	});
+</script>
+
+</head>
+<body>
+	<ul>
+		<li class="red"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"><strong id="s1"> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="red"><strong> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"><strong id="s2"> 텍스트 </strong> 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+</body>
+</html>
