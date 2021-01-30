@@ -23,7 +23,7 @@ const ImageViewer = {
 		index = ImageViewer._makeFileName(index);
 		
 				
-		let str = '<img src="images/slide/image-' + index
+		let str = '<img src="../images/slide/image-' + index
 		+ '.png" width="50px" alt="image-.png" title="image-.png">';
 
 		items.push(str);
