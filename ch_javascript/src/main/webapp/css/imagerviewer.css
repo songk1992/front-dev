@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* { margin:0; padding:0 }
+
+.image-viewer {
+	position: relative;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+}
+
+.image-viewer .image-row{
+	position: relative;
+	display: flex;
+	white-space: nowrap;
+	padding: 4px 0;
+	transform: rotate(-30deg);
+}
+
+.image-viewer .image-row img{
+display: block;
+    width: 50px;
+    margin: 0 auto;
+    white-space: nowrap;
+
+}
+
+img:hover{
+	border: 5px solide blue;
+
+}
