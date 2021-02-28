@@ -36,5 +36,6 @@
 		<module>ch_jquery</module>
 		<module>ch_javascript</module>
 		<module>ch07</module>
+		<module>learn_css</module>
 	</modules>
 </project>
